@@ -2,6 +2,7 @@ CPP_SHARED := -std=c++11 -O3 -I src -shared -fPIC
 CPP_OPENSSL_OSX := -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include
 CPP_OSX := 
 #-stdlib=libc++ -mmacosx-version-min=10.7 -undefined dynamic_lookup $(CPP_OPENSSL_OSX)
+THIRD_PATH := /Users/caopo/myroot/third
 
 #-Wl,R/opt/mysql/lib
 LDFLAGS += -L.\
@@ -13,13 +14,14 @@ LDFLAGS += -L.\
 CPPFLAGS += -g -lpthread -std=c++11 -luWS -lssl -lcrypto -lz -luv
 
 CPP_INCLUDE := -I.\
-	-I/Users/caobo/myroot/third/boost_1_67_0/\
-	-I/Users/caobo/myroot/third/uWebSockets/src\
-	-I/lua\
+	-I$(THIRD_PATH)/boost_1_67_0/\
+	-I$(THIRD_PATH)/uWebSockets/src\
+	-I$(THIRD_PATH)/lua-5.3.4/src\
 
-CPP_SLIB := /Users/caobo/myroot/third/boost_1_67_0/stage/lib/libboost_system.a\
-	/Users/caobo/myroot/third/boost_1_67_0/stage/lib/libboost_thread.a\
-	./lua/liblua.a\
+CPP_SLIB := $(THIRD_PATH)/boost_1_67_0/stage/lib/libboost_system.a\
+	$(THIRD_PATH)/boost_1_67_0/stage/lib/libboost_thread.a\
+	$(THIRD_PATH)/lua-5.3.4/src/liblua.a\
+
 
 CPP_DLIB := 
 CPP_SRC := main.cpp\
