@@ -2,11 +2,15 @@
 #include "app.h"
 #include "uWS.h"
 #include <iostream>
+#include "lvm.h"
 
 #include "third/Simple-Web-Server/client_http.hpp"
 // using HttpServer = SimpleWeb::Server<SimpleWeb::HTTP>;
 using HttpClient = SimpleWeb::Client<SimpleWeb::HTTP>;
 
+boost::mutex NET::m_lockWSConn;
+std::map<uint32_t, void*> NET::mapWSConn;
+uint32_t NET::_WS_GEN_ID = 0;
 
 bool NET::Start()
 {
@@ -25,6 +29,32 @@ bool NET::Start()
     return true;
 }
   
+uint32_t NET::AllocId()
+{
+    if (_WS_GEN_ID >= 0xFFFFFFFF){
+        _WS_GEN_ID = 0;
+    }
+    while (true){
+        uint32_t id = ++_WS_GEN_ID;
+        if (mapWSConn.end() == mapWSConn.find(id)){
+            return id;
+        }
+    }
+    //unreachable
+    return -1;
+}
+
+bool NET::SendClient(int wid, const char *msg, int len)
+{
+    boost::mutex::scoped_lock lock(m_lockWSConn);
+    std::map<uint32_t, void*>::iterator it = mapWSConn.find(wid);
+    if (it != mapWSConn.end()){
+        ((uWS::WebSocket<uWS::SERVER> *)it->second)->send(msg, len, uWS::OpCode::TEXT, nullptr, nullptr, true);
+        return true;
+    }
+    return false;
+}
+  
 void NET::ws_work() {
     uWS::Hub h;
 
@@ -32,19 +62,31 @@ void NET::ws_work() {
     h.onConnection([&h](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
         std::cout << "onConnection:" << (void*)ws << std::endl;
 
-
+        boost::mutex::scoped_lock lock(m_lockWSConn);
+        uint32_t id = AllocId();
+        ws->setUserData((void*)(uint64_t)id);
+        mapWSConn[id] = ws;
     });
 
     h.onMessage([&h](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
         std::cout << "onMessage:" << (void*)ws << std::endl;
 
-        ws->send(message, length, opCode, nullptr, nullptr, true);
-
+        boost::mutex::scoped_lock lock(m_lockWSConn);
+        uint32_t id = (uint32_t)(uint64_t)ws->getUserData();
+        // ws->send(message, length, opCode, nullptr, nullptr, true);
+        LvmMgr::getInstance()->PostMsg(
+            0, id, LVM_CMD_CLIENT_MSG, message, length);
     });
 
     h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER> *ws, int code, char *message, size_t length) {
         std::cout << "onDisconnection:" << (void*)ws << std::endl;
 
+        boost::mutex::scoped_lock lock(m_lockWSConn);
+        uint32_t id = (uint32_t)(uint64_t)ws->getUserData();
+        std::map<uint32_t, void*>::iterator it = mapWSConn.find(id);
+        if (it != mapWSConn.end()){
+            mapWSConn.erase(it);
+        }
     });
 
     h.listen(3000);
@@ -79,7 +121,7 @@ bool NET::_HttpReq(int idlvm, int sid, const std::string & method,
 
         ret = r1->content.string();
 
-        // std::cout << ret.size() << ";==" << ret << std::endl; 
+        // std::cout <<o ret.size() << ";==" << ret << std::endl; 
 
         // LvmMgr::getInstance()->PostMsg(
         //     idlvm, sid, LVM_CMD_HTTP_RESP, ret.c_str(), ret.length());

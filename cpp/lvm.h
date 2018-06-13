@@ -104,19 +104,23 @@ protected:
 
 public:
     uint64_t PostMsg(int dest, int id, int cmd, const char *msg, int len);
-
+    
 protected:
     void _PostMsg(LVM_MSG *pMsg);
     int ProcessMsg();
 
 public:
     int SetTimer(int lvmid, int iTimerID, int iElapse, int once);
+    int KillTimer(int lvmid, int iTimerID);
+
     int _CreateLvm(const std::string &file);
     bool _RemoveLvm(int id);
     boost::shared_ptr<LVM> GetLVM(int id);
+    
 
 protected:
     int _SetTimer(int lvmid, int iTimerID, int iElapse, int once);
+    int _KillTimer(int lvmid, int iTimerID);
 
 protected:
     void AddToGlobal(boost::shared_ptr<LVM> lvm);

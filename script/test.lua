@@ -1,8 +1,14 @@
+package.path = "script/?.lua;"..package.path
+package.cpath = "luaclib/?.so;"..package.cpath
 
-function DP(cmd,msg)  
-    print(cmd, msg)
+local base = require "base"
+local cjson = require "cjson"
 
-    -- print("external:"..EXTERNAL(0, 2, 12, 2000))
-end
+local sampleJson = [[
+    {
+        "file":"run test.lua"
+    }
+]];
+local data = cjson.decode(sampleJson);
+print(data["file"]);
 
--- print("external:"..EXTERNAL(0, 2, 12, 2000))

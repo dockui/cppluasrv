@@ -21,9 +21,17 @@ static int luaInterface(lua_State *L)
     lua_pop(L, 1);
 
     switch(method){
+        case LVM_CMD_CLIENT_MSG_BACK:
+        {
+            int wid = lua_tonumber(L, base+1);
+            const char * strMsg = lua_tostring(L, base+2);
+            int len = lua_tonumber(L, base+3);
+            NET::getInstance()->SendClient(wid, strMsg, len);
+        }
+        break;
         case LVM_CMD_CREATLVM: //create lvm
         {
-            const char *pLuaFile = lua_tostring(L, 3);
+            const char *pLuaFile = lua_tostring(L, base+1);
 
             int ret = LvmMgr::getInstance()->_CreateLvm(pLuaFile);
             lua_pushnumber(L, ret);  
@@ -44,6 +52,12 @@ static int luaInterface(lua_State *L)
             return 1;  
         }
         break;  
+        case LVM_CMD_KILLTIMER:
+        {
+            int timeid = lua_tonumber(L, base+1);
+            LvmMgr::getInstance()->KillTimer(idlvm, timeid);
+        }
+        break;
         case LVM_CMD_HTTP_REQ:
         {
             std::string strMethod = lua_tostring(L, base+1);
@@ -101,6 +115,8 @@ bool LVM::Init()
     if(bRet)  
     {  
         std::cerr<<"pcall error"<<endl;  
+        const char *pErrorMsg = lua_tostring(L, -1);  
+        std::cerr << pErrorMsg << endl;  
         return false;  
     }  
 
@@ -253,6 +269,12 @@ int LvmMgr::SetTimer(int lvmid, int iTimerID, int iElapse, int once)
     return 0;
 }
 
+int LvmMgr::KillTimer(int lvmid, int iTimerID)
+{
+    io_service->post(boost::bind(&LvmMgr::_KillTimer, this, lvmid, iTimerID));
+    return 0;
+}
+
 int LvmMgr::_SetTimer(int lvmid, int iTimerID, int iElapse, int once)
 {
     boost::shared_ptr<LVM> spLvm = GetLVM(lvmid);
@@ -260,6 +282,16 @@ int LvmMgr::_SetTimer(int lvmid, int iTimerID, int iElapse, int once)
         return -1;
     }
     spLvm->SetTimer(iTimerID, iElapse, once);
+    return 0;
+}
+
+int LvmMgr::_KillTimer(int lvmid, int iTimerID)
+{
+    boost::shared_ptr<LVM> spLvm = GetLVM(lvmid);
+    if (spLvm == nullptr){
+        return -1;
+    }
+    spLvm->KillTimer(iTimerID);
     return 0;
 }
 
