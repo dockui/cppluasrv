@@ -12,12 +12,14 @@ LDFLAGS += -L.\
 	#-L/Users/caobo/myroot/third/uWebSockets\
 	#-Wl,R/Users/caobo/myroot/third/uWebSockets
 
-CPPFLAGS += -g -lpthread -std=c++11 -luWS -lssl -lcrypto -lz -luv
+CPPFLAGS += -g -lpthread -std=c++11 -luWS -lssl -lcrypto -lz -luv \
+	-DELPP_THREAD_SAFE
 
 CPP_INCLUDE := -I.\
 	-I$(THIRD_PATH)/boost_1_67_0/\
 	-I$(THIRD_PATH)/uWebSockets/src\
 	-I$(THIRD_PATH)/lua-5.3.4/src\
+	-Ithird/easyloggingpp\
 
 CPP_SLIB := $(THIRD_PATH)/boost_1_67_0/stage/lib/libboost_system.a\
 	$(THIRD_PATH)/boost_1_67_0/stage/lib/libboost_thread.a\
@@ -29,6 +31,7 @@ CPP_SRC := $(APP_PATH)/main.cpp\
 	$(APP_PATH)/net.cpp\
 	$(APP_PATH)/lvm.cpp\
 	$(APP_PATH)/app.cpp\
+	third/easyloggingpp/easylogging++.cc\
 	
 	
 

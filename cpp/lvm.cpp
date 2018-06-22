@@ -1,4 +1,5 @@
 #include "lvm.h"
+#include "stdafx.h"
 #include "app.h"
 #include "net.h"
 

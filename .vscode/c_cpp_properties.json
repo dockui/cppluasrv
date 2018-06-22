@@ -11,7 +11,8 @@
             "includePath": [
                 "${workspaceFolder}",
                 "/Users/caobo/myroot/third/boost_1_67_0",
-                "/Users/caobo/myroot/third/uWebSockets/src"
+                "/Users/caobo/myroot/third/uWebSockets/src",
+                "/Users/caobo/myroot/third/easyloggingpp"
             ],
             "defines": [],
             "macFrameworkPath": [

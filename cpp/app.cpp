@@ -1,11 +1,6 @@
 #include "app.h"
+#include "stdafx.h"
 
-#include <boost/asio.hpp>
-#include <boost/shared_ptr.hpp>
-#include <boost/thread.hpp>
-#include <boost/thread/mutex.hpp>
-#include <boost/bind.hpp>
-#include <iostream>
 
 #include "net.h"
 
