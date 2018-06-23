@@ -56,6 +56,20 @@ bool NET::SendClient(int wid, const char *msg, int len)
     }
     return false;
 }
+
+void NET::CloseClient(int wid)
+{
+    LOG(INFO) << "CloseClient:" << wid;
+    {
+        boost::mutex::scoped_lock lock(m_lockWSConn);
+        std::map<uint32_t, void*>::iterator it = mapWSConn.find(wid);
+        if (it != mapWSConn.end()){
+            ((uWS::WebSocket<uWS::SERVER> *)it->second)->terminate();
+            mapWSConn.erase(it);
+        }         
+    }
+    LOG(INFO) << "CloseClient end:" << wid;
+}
   
 void NET::ws_work() {
     uWS::Hub h;
@@ -76,7 +90,6 @@ void NET::ws_work() {
     });
 
     h.onMessage([&h](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
-        LOG(INFO) << "onMessage:" << (void*)ws;
 
         uint32_t id = 0;
         {
@@ -92,17 +105,21 @@ void NET::ws_work() {
     });
 
     h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER> *ws, int code, char *message, size_t length) {
-        uint32_t id = 0;
-        {
-            boost::mutex::scoped_lock lock(m_lockWSConn);
-            id = (uint32_t)(uint64_t)ws->getUserData();
-            std::map<uint32_t, void*>::iterator it = mapWSConn.find(id);
-            if (it != mapWSConn.end()){
-                mapWSConn.erase(it);
+        LOG(INFO) << "onDisconnection beg:" << code << "; ws=" << (void*)ws;
+        uint32_t id = 0; 
+        if (code != 1006){
+            {
+                boost::mutex::scoped_lock lock(m_lockWSConn);
+                id = (uint32_t)(uint64_t)ws->getUserData();
+                std::map<uint32_t, void*>::iterator it = mapWSConn.find(id);
+                if (it != mapWSConn.end()){
+                    mapWSConn.erase(it);
+                }
             }
+            LvmMgr::getInstance()->PostMsg(
+                MAIN_LVM_ID, id, LVM_CMD_CLIENT_DISCONN, NULL,  0);       
         }
-        LvmMgr::getInstance()->PostMsg(
-            MAIN_LVM_ID, id, LVM_CMD_CLIENT_DISCONN, NULL,  0); 
+
 
         LOG(INFO) << "onDisconnection:" << id << "; ws=" << (void*)ws;
     });

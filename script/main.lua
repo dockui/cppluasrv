@@ -27,6 +27,11 @@ local tcnt = 1
 base.RegCmdCB(CMD.LVM_CMD_CLIENT_MSG, function(wid, msg)
     print("LVM_CMD_CLIENT_MSG:"..wid..";msg:"..msg)
     local backMsg = "from server:"..msg
+    if msg == "quit" then
+        base.CloseClient(wid)
+        return
+    end
+
     base.SendToClient(wid, backMsg, #backMsg)
 end)
 

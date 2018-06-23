@@ -121,5 +121,9 @@ function M.SendToClient(wid, msg, len)
     EXTERNAL(CMD.LVM_CMD_CLIENT_MSG_BACK, 0, wid, msg, len)
 end
 
+function M.CloseClient(wid)   
+    print("CloseClient beg:"..wid)
+    EXTERNAL(CMD.LVM_CMD_CLIENT_CLOSE, 0, wid)
+end
 
 return M

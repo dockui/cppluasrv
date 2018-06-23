@@ -23,6 +23,22 @@ static int luaInterface(lua_State *L)
     lua_pop(L, 1);
 
     switch(method){
+        case LVM_CMD_SEND_LVMMSG:
+        case LVM_CMD_RET_LVMMSG:
+        {
+            int vid = lua_tonumber(L, base+1);
+            const char * strMsg = lua_tostring(L, base+2);
+            int len = lua_tonumber(L, base+3);
+            LvmMgr::getInstance()->PostMsg(
+                vid, sid, method, strMsg, len);
+        }
+        break;
+        case LVM_CMD_CLIENT_CLOSE:
+        {
+            int wid = lua_tonumber(L, base+1);
+            NET::getInstance()->CloseClient(wid);
+        }
+        break;
         case LVM_CMD_CLIENT_MSG_BACK:
         {
             int wid = lua_tonumber(L, base+1);
@@ -38,6 +54,14 @@ static int luaInterface(lua_State *L)
             int ret = LvmMgr::getInstance()->_CreateLvm(pLuaFile);
             lua_pushnumber(L, ret);  
             return 1;  
+        }
+        break;
+        case LVM_CMD_DELLVM:
+        {
+            int vid = lua_tonumber(L, base+1);
+            int ret = LvmMgr::getInstance()->_RemoveLvm(vid);
+            lua_pushnumber(L, ret);  
+            return 1;      
         }
         break;
         case LVM_CMD_SETTIMER: //settimer
@@ -233,7 +257,7 @@ int LvmMgr::_CreateLvm(const std::string &file)
 
         // _lvmMain->SetTimer(1, 3000);
 
-        return true;
+        return MAIN_LVM_ID;
     }
     
     int id = ++_gen_id;

@@ -31,7 +31,8 @@ public:
         const std::string &params);
 
     bool SendClient(int wid, const char *msg, int len);
-    
+    void CloseClient(int wid);
+
 protected:
     static void ws_work();
 
