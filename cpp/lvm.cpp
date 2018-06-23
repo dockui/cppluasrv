@@ -1,5 +1,6 @@
-#include "lvm.h"
 #include "stdafx.h"
+#include "lvm.h"
+
 #include "app.h"
 #include "net.h"
 
@@ -9,7 +10,7 @@ using namespace std;
 static const char UKey = 'k';
 static int luaInterface(lua_State *L)  
 {
-    std::cout << "luaInterface:" << boost::this_thread::get_id() << "\n";
+    LOG(INFO) << "luaInterface:" << boost::this_thread::get_id();
 
     int n = lua_gettop(L);  
     int method = lua_tonumber(L, 1); 
@@ -90,7 +91,7 @@ bool LVM::Init()
     L = luaL_newstate();  
     if (L == NULL)  
     {  
-        std::cout<<"load file error"<<endl;
+        LOG(ERROR)<<"load file error";
         return false;  
     }  
    
@@ -98,7 +99,7 @@ bool LVM::Init()
     int bRet = luaL_loadfile(L, m_file.c_str());  
     if(bRet)  
     {  
-        std::cout<<"load file error"<<endl;  
+        LOG(ERROR)<<"load file error";  
         return false;  
     }  
    
@@ -115,9 +116,9 @@ bool LVM::Init()
     bRet = lua_pcall(L,0,0,0);  
     if(bRet)  
     {  
-        std::cerr<<"pcall error"<<endl;  
+        LOG(ERROR)<<"pcall error";  
         const char *pErrorMsg = lua_tostring(L, -1);  
-        std::cerr << pErrorMsg << endl;  
+        LOG(ERROR) << pErrorMsg;  
         return false;  
     }  
 
@@ -135,27 +136,32 @@ void LVM::UnInit()
 bool LVM::Dispatch(int sid, int cmd, char * msg, int len)
 {
     if (L == NULL){
-        std::cerr << "dispatch msg error: L is null" << endl; 
+        LOG(ERROR) << "dispatch msg error: L is null" ; 
         return false;
     }
-
+    int nInParamCnt = 3;
     lua_getglobal(L, "DP");  
     lua_pushnumber(L, sid);   
-    lua_pushnumber(L, cmd);          
-    lua_pushlstring(L, msg, len);           
-    
-    int iRet= lua_pcall(L, 3, 1, 0);// 调用函数，调用完成以后，会将返回值压入栈中，2表示参数个数，1表示返回结果个数。  
+    lua_pushnumber(L, cmd);   
+    if (msg){
+        lua_pushlstring(L, msg, len);
+    }       
+    else{
+        nInParamCnt = 2;
+    }
+  
+    int iRet= lua_pcall(L, nInParamCnt, 1, 0);// 调用函数，调用完成以后，会将返回值压入栈中，2表示参数个数，1表示返回结果个数。  
     if (iRet)                       
     {  
         const char *pErrorMsg = lua_tostring(L, -1);  
-        std::cerr << pErrorMsg << endl;  
+        LOG(ERROR) << pErrorMsg;  
         UnInit();
         return false;  
     }  
     if (lua_isnumber(L, -1))        //取值输出  
     {  
         double fValue = lua_tonumber(L, -1);  
-        std::cout << "Result is " << fValue << endl;  
+        LOG(INFO) << "Result is " << fValue ;  
     }  
 
     return true;
@@ -210,20 +216,17 @@ bool LvmMgr::Init(){
             boost::bind( &LvmMgr::ProcessMsg , this) );
     }
 
-
-    
-
     return true;
 }
 
 int LvmMgr::_CreateLvm(const std::string &file)
 {
-    std::cout << "_CreateLvm: id=" << boost::this_thread::get_id() << "\n";
+    LOG(INFO) << "_CreateLvm: tid=" << boost::this_thread::get_id() << "; file=" << file;
 
     if (file == "main"){
-        _lvmMain = boost::make_shared<LVM>(0, "script/main.lua", io_service);
+        _lvmMain = boost::make_shared<LVM>(MAIN_LVM_ID, "script/main.lua", io_service);
         if (!_lvmMain->Init()){
-            std::cout << "create main lvm failure! " << endl;  
+            LOG(ERROR) << "create main lvm failure! ";  
             return 0;
         }
         mapLvm.insert(std::pair<int, boost::shared_ptr<LVM>>(0, _lvmMain));
@@ -237,7 +240,7 @@ int LvmMgr::_CreateLvm(const std::string &file)
 
     boost::shared_ptr<LVM> lvm = boost::make_shared<LVM>(id, file, io_service);
     if (!lvm->Init()){
-        std::cout << "create lvm failure! " << endl;  
+        LOG(ERROR) << "create lvm failure! " << endl;  
         return 0;
     }
 
@@ -305,19 +308,20 @@ uint64_t LvmMgr::PostMsg(int dest, int id, int cmd, const char *msg, int len)
     pMsg->id = id;
     pMsg->dest = dest;
     pMsg->cmd = cmd;
-    pMsg->msg = new char[len];
-    memcpy(pMsg->msg, msg, len);
-    pMsg->len = len;
-    
+    if (msg){
+        pMsg->msg = new char[len];
+        memcpy(pMsg->msg, msg, len);
+        pMsg->len = len;      
+    }
     io_service->post(boost::bind(&LvmMgr::_PostMsg, this, pMsg));
     return pMsg->id;
 }
  
 void LvmMgr::_PostMsg(LVM_MSG *pMsg){
-    std::cout << "_PostMsg msg:" << pMsg->id << ";cmd=" << pMsg->cmd 
-        << ";msg=" << pMsg->msg << ";len=" << pMsg->len << std::endl;
+    LOG(INFO) << "_PostMsg msg:" << pMsg->id << ";cmd=" << pMsg->cmd 
+        << ";msg=" << (std::string(pMsg->msg, pMsg->len)) << ";len=" << pMsg->len;
     //main lvm
-    if (0 == pMsg->dest){
+    if (MAIN_LVM_ID == pMsg->dest){
         _lvmMain->Dispatch(pMsg->id, pMsg->cmd, pMsg->msg, pMsg->len);
 
         delete pMsg;
@@ -365,7 +369,7 @@ int LvmMgr::ProcessMsg()
         do{
             LVM_MSG *pMsg = spLvm->GetMsg();
             if (pMsg){
-                std::cout << boost::this_thread::get_id() << "\n";
+                LOG(INFO) << boost::this_thread::get_id();
                 spLvm->Dispatch(pMsg->id, pMsg->cmd, pMsg->msg, pMsg->len);
                 delete pMsg;
             }

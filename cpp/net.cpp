@@ -1,6 +1,6 @@
 
-#include "net.h"
 #include "stdafx.h"
+#include "net.h"
 #include "app.h"
 #include "uWS.h"
 #include <iostream>
@@ -62,33 +62,49 @@ void NET::ws_work() {
 
     
     h.onConnection([&h](uWS::WebSocket<uWS::SERVER> *ws, uWS::HttpRequest req) {
-        std::cout << "onConnection:" << (void*)ws << std::endl;
+        uint32_t id = 0;
+        {
+            boost::mutex::scoped_lock lock(m_lockWSConn);
+            id = AllocId();
+            ws->setUserData((void*)(uint64_t)id);
+            mapWSConn[id] = ws;              
+        }
+        LvmMgr::getInstance()->PostMsg(
+            MAIN_LVM_ID, id, LVM_CMD_CLIENT_CONN, NULL, 0);
 
-        boost::mutex::scoped_lock lock(m_lockWSConn);
-        uint32_t id = AllocId();
-        ws->setUserData((void*)(uint64_t)id);
-        mapWSConn[id] = ws;
+        LOG(INFO) << "onConnection:" << id << "; ws=" << (void*)ws;
     });
 
     h.onMessage([&h](uWS::WebSocket<uWS::SERVER> *ws, char *message, size_t length, uWS::OpCode opCode) {
-        std::cout << "onMessage:" << (void*)ws << std::endl;
+        LOG(INFO) << "onMessage:" << (void*)ws;
 
-        boost::mutex::scoped_lock lock(m_lockWSConn);
-        uint32_t id = (uint32_t)(uint64_t)ws->getUserData();
-        // ws->send(message, length, opCode, nullptr, nullptr, true);
+        uint32_t id = 0;
+        {
+            boost::mutex::scoped_lock lock(m_lockWSConn);
+            id = (uint32_t)(uint64_t)ws->getUserData();           
+        }
         LvmMgr::getInstance()->PostMsg(
-            0, id, LVM_CMD_CLIENT_MSG, message, length);
+            MAIN_LVM_ID, id, LVM_CMD_CLIENT_MSG, message,  length); 
+
+        LOG(INFO) << "onMessage:" << id << "; ws=" << (void*)ws << ";len=" << length << "; msg=" << std::string(message,length);
+        // ws->send(message, length, opCode, nullptr, nullptr, true);
+
     });
 
     h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER> *ws, int code, char *message, size_t length) {
-        std::cout << "onDisconnection:" << (void*)ws << std::endl;
-
-        boost::mutex::scoped_lock lock(m_lockWSConn);
-        uint32_t id = (uint32_t)(uint64_t)ws->getUserData();
-        std::map<uint32_t, void*>::iterator it = mapWSConn.find(id);
-        if (it != mapWSConn.end()){
-            mapWSConn.erase(it);
+        uint32_t id = 0;
+        {
+            boost::mutex::scoped_lock lock(m_lockWSConn);
+            id = (uint32_t)(uint64_t)ws->getUserData();
+            std::map<uint32_t, void*>::iterator it = mapWSConn.find(id);
+            if (it != mapWSConn.end()){
+                mapWSConn.erase(it);
+            }
         }
+        LvmMgr::getInstance()->PostMsg(
+            MAIN_LVM_ID, id, LVM_CMD_CLIENT_DISCONN, NULL,  0); 
+
+        LOG(INFO) << "onDisconnection:" << id << "; ws=" << (void*)ws;
     });
 
     h.listen(3000);
@@ -112,6 +128,10 @@ bool NET::_HttpReq(int idlvm, int sid, const std::string & method,
     const std::string &path, 
     const std::string &params)
 {
+    LOG(INFO) << "_HttpReq:" << idlvm << ";sid=" << sid 
+        << "; method=" << method << ";host=" << host 
+        << "; path=" << path << "; params=" << params ;
+
     HttpClient client(host.c_str());
     std::string ret;
     std::string status;
@@ -129,7 +149,7 @@ bool NET::_HttpReq(int idlvm, int sid, const std::string & method,
         //     idlvm, sid, LVM_CMD_HTTP_RESP, ret.c_str(), ret.length());
     }
     catch(const SimpleWeb::system_error &e) {
-        std::cerr << "Client request error: " << e.what() << std::endl;
+        LOG(ERROR) << "Client request error: " << e.what() ;
         status = e.what();
     }
 

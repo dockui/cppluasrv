@@ -1,5 +1,5 @@
-#include "app.h"
 #include "stdafx.h"
+#include "app.h"
 
 
 #include "net.h"
@@ -20,7 +20,7 @@ boost::thread_group App::worker_threads;
 
 bool App::Run()
 {
-    std::cout << "App::Run() start." <<  std::endl;
+    LOG(INFO) << "App::Run() start.";
 
     NET::getInstance()->Start();
     

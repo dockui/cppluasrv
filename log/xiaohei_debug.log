@@ -1,0 +1,6 @@
+[INFO  ] | xiaohei server start 丰...
+[INFO  ] | App::Run() start.
+[INFO  ] | _CreateLvm: tid=0x70000df8f000; file=main
+[INFO] | xiaohei server start 丰... | [2018-06-23 11:49:15,493 | cpp/main.cpp:34{int main(int, char **)}]
+[INFO] | App::Run() start. | [2018-06-23 11:49:15,493 | cpp/app.cpp:23{bool App::Run()}]
+[INFO] | _CreateLvm: tid=0x700000d96000; file=main | [2018-06-23 11:49:15,494 | cpp/lvm.cpp:224{int LvmMgr::_CreateLvm(const std::string &)}]

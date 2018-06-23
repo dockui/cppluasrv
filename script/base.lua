@@ -116,9 +116,9 @@ function M.CreateLvm(file)
     return id
 end
 
-function M.SendToClient(sid, msg, len)   
-    print("SendToClient beg:"..sid..", msg:"..msg..";len:"..len)
-    EXTERNAL(CMD.LVM_CMD_CLIENT_MSG_BACK, 0, sid, msg, len)
+function M.SendToClient(wid, msg, len)   
+    print("SendToClient beg:"..wid..", msg:"..msg..";len:"..len)
+    EXTERNAL(CMD.LVM_CMD_CLIENT_MSG_BACK, 0, wid, msg, len)
 end
 
 

@@ -1,14 +1,6 @@
 #ifndef __LVM__
 #define __LVM__
-#include <string>
-#include <map>
-#include <queue>
-#include <boost/bind.hpp>
-#include <boost/shared_ptr.hpp>
-#include <boost/enable_shared_from_this.hpp>
-#include <boost/asio.hpp>
-#include <boost/thread.hpp>
-#include <boost/thread/mutex.hpp>
+
 
 extern "C"  
 {  
@@ -20,6 +12,7 @@ extern "C"
 #include "timer.h"
 #include "def.h"
 
+#define MAIN_LVM_ID 0
 
 struct LVM_MSG{
     //uint64_t id;

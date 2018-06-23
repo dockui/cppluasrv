@@ -29,3 +29,13 @@ base.RegCmdCB(CMD.LVM_CMD_CLIENT_MSG, function(wid, msg)
     local backMsg = "from server:"..msg
     base.SendToClient(wid, backMsg, #backMsg)
 end)
+
+base.RegCmdCB(CMD.LVM_CMD_CLIENT_CONN, function(wid, msg)
+    print("LVM_CMD_CLIENT_CONN:"..wid)
+   
+end)
+
+base.RegCmdCB(CMD.LVM_CMD_CLIENT_DISCONN, function(wid, msg)
+    print("LVM_CMD_CLIENT_DISCONN:"..wid)
+   
+end)

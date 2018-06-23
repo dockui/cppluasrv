@@ -38,7 +38,8 @@
         "istream": "cpp",
         "regex": "cpp",
         "list": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "slist": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -1,6 +1,7 @@
+#include "stdafx.h"
 #include "uWS.h"
 
-#include "stdafx.h"
+
 
 #include "app.h"
 // extern "C"  
@@ -30,7 +31,7 @@ int main( int argc, char * argv[] )
     el::Loggers::reconfigureAllLoggers(conf);
     el::Helpers::installPreRollOutCallback(rolloutHandler);
     
-    LOG(INFO) << "xiaohei server start ...";
+    LOG(INFO) << "xiaohei server start 丰...";
 
     app.Run();
 
