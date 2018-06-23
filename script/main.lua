@@ -1,30 +1,31 @@
-package.path = "script/?.lua;"..package.path
+package.path = "script/?.lua;script/utils/?.lua;script/common/?.lua;"..package.path
 package.cpath = "luaclib/?.so;"..package.cpath
 
 local CMD = require "cmd"
-local base = require "base"
+local BASE = require "base"
+
+local log = require "log"
+local json = require "json"
+require "functions"
+
+local connmgr = require "connmgr"
 
 
--- print("external:"..EXTERNAL(0,"test.lua"))
+local Main = class("Main")
 
--- print("external:"..EXTERNAL(4, "GET", "www.baidufdsf.com"))
-local tcnt = 1
--- M.httpReq(method, host, path, param, cb)
--- base.Time(2, 5000, 0, function(tid)
---     tcnt = tcnt + 1
+function Main:ctor(obj,data)
+    log.info("Main:ctor()")
+    if self.init then self:init(data) end
+end
+function Main:init(data)
+    log.info("Main:init()")
 
---     print("time out:"..tid..";cnt:"..tcnt)
-    
--- end
--- )
+    self.connMgr = connmgr:new()
 
---base.CreateLvm("script/test.lua")
--- base.httpReq("GET", "www.baidu.com", "", "", function(msg)
---     print(msg)
--- end
--- )
+    BASE.RegCmdCB(CMD.LVM_CMD_CLIENT_MSG, handler(self, self.OnMessage))
+end
 
-base.RegCmdCB(CMD.LVM_CMD_CLIENT_MSG, function(wid, msg)
+function Main:OnMessage(wid, msg)
     print("LVM_CMD_CLIENT_MSG:"..wid..";msg:"..msg)
     local backMsg = "from server:"..msg
     if msg == "quit" then
@@ -32,15 +33,9 @@ base.RegCmdCB(CMD.LVM_CMD_CLIENT_MSG, function(wid, msg)
         return
     end
 
-    base.SendToClient(wid, backMsg, #backMsg)
-end)
+    BASE.SendToClient(wid, backMsg, #backMsg)
+end
 
-base.RegCmdCB(CMD.LVM_CMD_CLIENT_CONN, function(wid, msg)
-    print("LVM_CMD_CLIENT_CONN:"..wid)
-   
-end)
+AppMain = Main:new("main")
 
-base.RegCmdCB(CMD.LVM_CMD_CLIENT_DISCONN, function(wid, msg)
-    print("LVM_CMD_CLIENT_DISCONN:"..wid)
-   
-end)
+
