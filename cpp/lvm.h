@@ -17,11 +17,13 @@ extern "C"
 struct LVM_MSG{
     //uint64_t id;
     int id;
+    int from;
     int dest;
     int cmd;
     char *msg;
     int len;
     LVM_MSG():id(0),
+        from(0),
         dest(0),
         cmd(0),
         msg(NULL),
@@ -57,7 +59,7 @@ public:
     int AddMsg(LVM_MSG *pMsg);
     LVM_MSG * GetMsg();
 
-    bool Dispatch(int sid, int cmd, char*msg, int len);
+    bool Dispatch(int fid, int sid, int cmd, char*msg, int len);
 
 protected:
     virtual void OnTimer(int iTimerID, const boost::system::error_code& error);
@@ -96,7 +98,7 @@ protected:
     boost::asio::io_service::work *io_work;
 
 public:
-    uint64_t PostMsg(int dest, int id, int cmd, const char *msg, int len);
+    uint64_t PostMsg(int from, int dest, int id, int cmd, const char *msg, int len);
     
 protected:
     void _PostMsg(LVM_MSG *pMsg);

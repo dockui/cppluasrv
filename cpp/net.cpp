@@ -83,7 +83,7 @@ void NET::ws_work() {
             ws->setUserData((void*)(uint64_t)id);
             mapWSConn[id] = ws;              
         }
-        LvmMgr::getInstance()->PostMsg(
+        LvmMgr::getInstance()->PostMsg(id,
             MAIN_LVM_ID, id, LVM_CMD_CLIENT_CONN, NULL, 0);
 
         LOG(INFO) << "onConnection:" << id << "; ws=" << (void*)ws;
@@ -96,7 +96,7 @@ void NET::ws_work() {
             boost::mutex::scoped_lock lock(m_lockWSConn);
             id = (uint32_t)(uint64_t)ws->getUserData();           
         }
-        LvmMgr::getInstance()->PostMsg(
+        LvmMgr::getInstance()->PostMsg(id,
             MAIN_LVM_ID, id, LVM_CMD_CLIENT_MSG, message,  length); 
 
         LOG(INFO) << "onMessage:" << id << "; ws=" << (void*)ws << ";len=" << length << "; msg=" << std::string(message,length);
@@ -116,7 +116,7 @@ void NET::ws_work() {
                     mapWSConn.erase(it);
                 }
             }
-            LvmMgr::getInstance()->PostMsg(
+            LvmMgr::getInstance()->PostMsg(id,
                 MAIN_LVM_ID, id, LVM_CMD_CLIENT_DISCONN, NULL,  0);       
         }
 
@@ -159,11 +159,6 @@ bool NET::_HttpReq(int idlvm, int sid, const std::string & method,
         status = r1->status_code;
 
         ret = r1->content.string();
-
-        // std::cout <<o ret.size() << ";==" << ret << std::endl; 
-
-        // LvmMgr::getInstance()->PostMsg(
-        //     idlvm, sid, LVM_CMD_HTTP_RESP, ret.c_str(), ret.length());
     }
     catch(const SimpleWeb::system_error &e) {
         LOG(ERROR) << "Client request error: " << e.what() ;
@@ -175,7 +170,7 @@ bool NET::_HttpReq(int idlvm, int sid, const std::string & method,
         ret = "fail:" + status;
     }
     
-    LvmMgr::getInstance()->PostMsg(
+    LvmMgr::getInstance()->PostMsg(idlvm,
         idlvm, sid, LVM_CMD_HTTP_RESP, ret.c_str(), ret.length());
         
     return true;

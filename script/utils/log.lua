@@ -7,7 +7,7 @@
 
 local M = {
     level = 4, 
-    output = "stdout", 
+    output = "NAT", 
     path = "./log"
 }
 
@@ -60,22 +60,13 @@ function M.generalPrint(level, fmt, ...)
         local func = debug.getinfo(3).name or "G_FUN"
         local timenow = os.date("%Y-%m-%d %H:%M:%S")
         local str    
-        
-        if level == 1 then
-            str = string.format("%s \27[0;32;32m[DEBUG]\27[m[%s, %-4d][%-15s] \27[0;32;32m%s\27[m\n",
-                                timenow, tostring(file), tostring(line), tostring(func), tostring(s))
-        elseif level == 2 then
-            str = string.format("%s \27[0;32;33m[INFO ]\27[m[%s, %-4d][%-15s] \27[0;32;33m%s\27[m\n",
-                                timenow, tostring(file), tostring(line), tostring(func), tostring(s))
-        elseif level == 3 then
-            str = string.format("%s \27[0;32;35m[WARN ]\27[m[%s, %-4d][%-15s] \27[0;32;35m%s\27[m\n",
-                                timenow, tostring(file), tostring(line), tostring(func), tostring(s))
-        elseif level == 4 then
-            str = string.format("%s \27[0;32;31m[ERROR]\27[m[%s, %-4d][%-15s] \27[0;32;31m%s\27[m\n",
-                                timenow, tostring(file), tostring(line), tostring(func), tostring(s))
-        end
-        
-        if log.output == "file" then
+
+        str = string.format("[LUA] %s =>[%s(line:%s){%s}",
+            tostring(s), tostring(file), tostring(line), tostring(func))
+    
+        if log.output == "NAT" then
+            EXTERNAL(150, 0, level, str, #str)
+        elseif log.output == "file" then
             local f = assert(io.open(log.path, 'a+'))
             f:write(str)
             f:close()

@@ -1,4 +1,5 @@
 {
+
     "files.associations": {
         "iostream": "cpp",
         "memory": "cpp",
@@ -47,7 +48,18 @@
         "set": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "cstddef": "cpp",
+        "new": "cpp",
+        "cctype": "cpp",
+        "cfenv": "cpp",
+        "cinttypes": "cpp",
+        "cmath": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

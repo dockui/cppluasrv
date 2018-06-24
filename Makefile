@@ -2,7 +2,7 @@ CPP_SHARED := -std=c++11 -O3 -I src -shared -fPIC
 CPP_OPENSSL_OSX := -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include
 CPP_OSX := 
 #-stdlib=libc++ -mmacosx-version-min=10.7 -undefined dynamic_lookup $(CPP_OPENSSL_OSX)
-THIRD_PATH := /Users/caobo/myroot/third
+THIRD_PATH := /Users/caopo/myroot/third
 APP_PATH := cpp
 
 #-Wl,R/opt/mysql/lib

@@ -1,6 +1,12 @@
 package.path = "script/?.lua;script/utils/?.lua;script/common/?.lua;"..package.path
 package.cpath = "luaclib/?.so;"..package.cpath
 
+package.path = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/lualibs/mobdebug/?.lua;"..package.path
+package.path = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/lualibs/?.lua;"..package.path
+package.cpath = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/bin/clibs53/?.dylib;"..package.cpath
+package.cpath = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/bin/clibs53/?/?.dylib;"..package.cpath
+require("mobdebug").start()
+
 local CMD = require "cmd"
 local BASE = require "base"
 
@@ -9,6 +15,7 @@ local json = require "json"
 require "functions"
 
 local connmgr = require "connmgr"
+local roommgr = require "roommgr"
 
 
 local Main = class("Main")
@@ -20,21 +27,18 @@ end
 function Main:init(data)
     log.info("Main:init()")
 
-    self.connMgr = connmgr:new()
+    self.loginServerId = BASE.CreateLvm("script/m_login.lua")
+    self.roomMgr = roommgr:new()
 
-    BASE.RegCmdCB(CMD.LVM_CMD_CLIENT_MSG, handler(self, self.OnMessage))
+    self.connMgr = connmgr:new({
+        loginServerId=self.loginServerId,
+        roomMgr = self.roomMgr
+        }
+    )
+
+
 end
 
-function Main:OnMessage(wid, msg)
-    print("LVM_CMD_CLIENT_MSG:"..wid..";msg:"..msg)
-    local backMsg = "from server:"..msg
-    if msg == "quit" then
-        base.CloseClient(wid)
-        return
-    end
-
-    BASE.SendToClient(wid, backMsg, #backMsg)
-end
 
 AppMain = Main:new("main")
 

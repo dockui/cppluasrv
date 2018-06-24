@@ -10,8 +10,6 @@ using namespace std;
 static const char UKey = 'k';
 static int luaInterface(lua_State *L)  
 {
-    LOG(INFO) << "luaInterface:" << boost::this_thread::get_id();
-
     int n = lua_gettop(L);  
     int method = lua_tonumber(L, 1); 
     int sid = lua_tonumber(L, 2); 
@@ -22,15 +20,39 @@ static int luaInterface(lua_State *L)
     int idlvm = lua_tonumber(L, -1); 
     lua_pop(L, 1);
 
+    // LOG(INFO) << "luaInterface: tid" << boost::this_thread::get_id() << ";Method=" 
+    //     << method << "; sid=" << sid << "; idlvm=" << idlvm;
+
     switch(method){
-        case LVM_CMD_SEND_LVMMSG:
-        case LVM_CMD_RET_LVMMSG:
+        case LVM_CMD_LOG:
         {
-            int vid = lua_tonumber(L, base+1);
+            int level = lua_tonumber(L, base+1);
             const char * strMsg = lua_tostring(L, base+2);
-            int len = lua_tonumber(L, base+3);
-            LvmMgr::getInstance()->PostMsg(
-                vid, sid, method, strMsg, len);
+            int len = lua_tonumber(L, base+3); 
+             
+            if (level == 1){
+                LOG(DEBUG) << std::string(strMsg, len);
+            }
+            else if (level == 2){
+                LOG(INFO) << std::string(strMsg, len);
+            }
+            else if (level == 3){
+                LOG(WARNING) << std::string(strMsg, len);
+            }
+            else{
+                LOG(ERROR) << std::string(strMsg, len);
+            }
+        }
+        break;
+        case LVM_CMD_MSG:
+        case LVM_CMD_MSG_RET:
+        {
+            int cmd = lua_tonumber(L, base+1);
+            int dest = lua_tonumber(L, base+2);
+            const char * strMsg = lua_tostring(L, base+3);
+            int len = lua_tonumber(L, base+4);
+            LvmMgr::getInstance()->PostMsg(idlvm,
+                dest, sid, cmd, strMsg, len);
         }
         break;
         case LVM_CMD_CLIENT_CLOSE:
@@ -115,7 +137,7 @@ bool LVM::Init()
     L = luaL_newstate();  
     if (L == NULL)  
     {  
-        LOG(ERROR)<<"load file error";
+        LOG(ERROR)<<"newstate error";
         return false;  
     }  
    
@@ -123,7 +145,9 @@ bool LVM::Init()
     int bRet = luaL_loadfile(L, m_file.c_str());  
     if(bRet)  
     {  
-        LOG(ERROR)<<"load file error";  
+        LOG(ERROR)<<"load file error"; 
+        const char *pErrorMsg = lua_tostring(L, -1);  
+        LOG(ERROR) << pErrorMsg;   
         return false;  
     }  
    
@@ -157,21 +181,22 @@ void LVM::UnInit()
     }
 }
 
-bool LVM::Dispatch(int sid, int cmd, char * msg, int len)
+bool LVM::Dispatch(int fid, int sid, int cmd, char * msg, int len)
 {
     if (L == NULL){
         LOG(ERROR) << "dispatch msg error: L is null" ; 
         return false;
     }
-    int nInParamCnt = 3;
-    lua_getglobal(L, "DP");  
+    int nInParamCnt = 4;
+    lua_getglobal(L, "Dispatch");  
+    lua_pushnumber(L, fid); 
     lua_pushnumber(L, sid);   
     lua_pushnumber(L, cmd);   
     if (msg){
         lua_pushlstring(L, msg, len);
     }       
     else{
-        nInParamCnt = 2;
+        nInParamCnt = 3;
     }
   
     int iRet= lua_pcall(L, nInParamCnt, 1, 0);// 调用函数，调用完成以后，会将返回值压入栈中，2表示参数个数，1表示返回结果个数。  
@@ -179,7 +204,7 @@ bool LVM::Dispatch(int sid, int cmd, char * msg, int len)
     {  
         const char *pErrorMsg = lua_tostring(L, -1);  
         LOG(ERROR) << pErrorMsg;  
-        UnInit();
+        // UnInit();
         return false;  
     }  
     if (lua_isnumber(L, -1))        //取值输出  
@@ -218,8 +243,8 @@ LVM_MSG * LVM::GetMsg()
 
 void LVM::OnTimer(int iTimerID, const boost::system::error_code& error)
 {
-    LvmMgr::getInstance()->PostMsg(
-        _id, 0, LVM_CMD_ONTIMER, (char*)&iTimerID, sizeof(int)
+    LvmMgr::getInstance()->PostMsg(_id,
+        _id, iTimerID, LVM_CMD_ONTIMER, NULL, 0
     );
 }
 
@@ -323,12 +348,13 @@ int LvmMgr::_KillTimer(int lvmid, int iTimerID)
     return 0;
 }
 
-uint64_t LvmMgr::PostMsg(int dest, int id, int cmd, const char *msg, int len)
+uint64_t LvmMgr::PostMsg(int from , int dest, int id, int cmd, const char *msg, int len)
 {
     static boost::atomic_uint64_t s_gen_msg_id(0);
  
     LVM_MSG * pMsg = new LVM_MSG();
     //pMsg->id = ++s_gen_msg_id;
+    pMsg->from = from;
     pMsg->id = id;
     pMsg->dest = dest;
     pMsg->cmd = cmd;
@@ -342,11 +368,11 @@ uint64_t LvmMgr::PostMsg(int dest, int id, int cmd, const char *msg, int len)
 }
  
 void LvmMgr::_PostMsg(LVM_MSG *pMsg){
-    LOG(INFO) << "_PostMsg msg:" << pMsg->id << ";cmd=" << pMsg->cmd 
+    LOG(INFO) << "_PostMsg msg:" << pMsg->id << ";from=" << pMsg->from << ";cmd=" << pMsg->cmd 
         << ";msg=" << (std::string(pMsg->msg, pMsg->len)) << ";len=" << pMsg->len;
     //main lvm
     if (MAIN_LVM_ID == pMsg->dest){
-        _lvmMain->Dispatch(pMsg->id, pMsg->cmd, pMsg->msg, pMsg->len);
+        _lvmMain->Dispatch(pMsg->from, pMsg->id, pMsg->cmd, pMsg->msg, pMsg->len);
 
         delete pMsg;
         return;
@@ -394,7 +420,7 @@ int LvmMgr::ProcessMsg()
             LVM_MSG *pMsg = spLvm->GetMsg();
             if (pMsg){
                 LOG(INFO) << boost::this_thread::get_id();
-                spLvm->Dispatch(pMsg->id, pMsg->cmd, pMsg->msg, pMsg->len);
+                spLvm->Dispatch(pMsg->from, pMsg->id, pMsg->cmd, pMsg->msg, pMsg->len);
                 delete pMsg;
             }
             else{
