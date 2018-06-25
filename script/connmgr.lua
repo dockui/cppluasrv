@@ -51,7 +51,14 @@ function ConnMgr:OnDisConnect(msg, fid, sid)
 end
 function ConnMgr:OnHeart(msg)
     log.info("ConnMgr:OnHeart:"..msg.fid)
-
+    local backMsg = json.encode(
+        {
+            cmd = CMD.REQ_HEART,
+            error = ECODE.CODE_SUCCESS,
+            data = ECODE.ErrDesc(ECODE.CODE_SUCCESS)
+        }
+    )
+    BASE.SendToClient(msg.fid, backMsg, #backMsg)
 end
 function ConnMgr:OnLogin(msg)
     log.info("ConnMgr:OnLogin:"..msg.fid)

@@ -4237,3 +4237,2402 @@
 [INFO|2018-06-24 21:39:39,099] _PostMsg msg:0;from=0;cmd=10;msg="{\n\t\"cmd\": 10,\n\t\"data\": {\n\t\t\"uid\": 2,\n\"roomid\":6261235\n\t}\n}";len=79 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
 [INFO|2018-06-24 21:39:39,103] 0x7000040bb000 =>[cpp/lvm.cpp:422{int LvmMgr::ProcessMsg()}]
 [INFO|2018-06-24 21:39:39,103] [LUA] dispatch fid=0.0;sid=0.0;cmd=10.0;msg="{\n\t\"cmd\": 10,\n\t\"data\": {\n\t\t\"uid\": 2,\n\"roomid\":6261235\n\t}\n}" =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,189] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:29:57,191] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:29:57,193] _CreateLvm: tid=0x7000075a5000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:29:57,225] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,225] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,225] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,225] _CreateLvm: tid=0x7000075a5000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:29:57,229] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,229] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,229] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,229] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,229] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,229] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:29:57,229] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:30:04,184] onConnection:1; ws=0x100b02850 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:30:04,184] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:30:04,185] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:30:06,780] onMessage:1; ws=0x100b02850;len=77; msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:30:06,781] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    };len=77 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:30:06,781] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:30:06,781] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[connmgr.lua(line:164){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:30:06,781] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,685] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:32:00,686] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:32:00,687] _CreateLvm: tid=0x7000001e0000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:32:00,703] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,703] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,703] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,703] _CreateLvm: tid=0x7000001e0000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:32:00,706] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,706] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,706] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,706] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,706] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,706] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:00,706] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:05,307] onConnection:1; ws=0x100a07b50 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:32:05,307] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:32:05,308] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:09,025] onMessage:1; ws=0x100a07b50;len=77; msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:32:09,026] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    };len=77 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:32:09,026] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:09,026] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:09,026] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:32:09,026] [LUA] SendToClient beg:1.0, msg:{"data":"not found","error":0,"cmd":1000};len:41 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:33:50,075] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:33:50,075] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:33:50,076] _CreateLvm: tid=0x700001ba0000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[ERROR|2018-06-25 20:33:50,090] pcall error =>[cpp/lvm.cpp:167{bool LVM::Init()}]
+[ERROR|2018-06-25 20:33:50,090] error loading module 'errorcode' from file 'script/common/errorcode.lua':
+	script/common/errorcode.lua:9: '}' expected (to close '{' at line 8) near '=' =>[cpp/lvm.cpp:169{bool LVM::Init()}]
+[ERROR|2018-06-25 20:33:50,090] create main lvm failure!  =>[cpp/lvm.cpp:278{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:33:56,560] onConnection:1; ws=0x100938be0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:33:56,561] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:33:56,561] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:33:58,383] onMessage:1; ws=0x100938be0;len=77; msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:33:58,383] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    };len=77 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:33:58,383] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:34:02,894] onMessage:1; ws=0x100938be0;len=77; msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:34:02,894] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    };len=77 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:34:02,895] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:34:37,647] onMessage:1; ws=0x100938be0;len=87; msg={
+        "cmd": 1001,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:34:37,648] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1001,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:34:37,648] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1001,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:34:40,704] onMessage:1; ws=0x100938be0;len=87; msg={
+        "cmd": 1001,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:34:40,704] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1001,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:34:40,704] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1001,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:34:47,458] onDisconnection beg:0; ws=0x100938be0 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:34:47,458] onDisconnection:1; ws=0x100938be0 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:34:47,458] _PostMsg msg:1;from=1;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:34:47,458] [LUA] dispatch fid=1.0;sid=1.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:34:49,755] onConnection:2; ws=0x100b025c0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:34:49,755] _PostMsg msg:2;from=2;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:34:49,755] [LUA] dispatch fid=2.0;sid=2.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:34:51,536] onMessage:2; ws=0x100b025c0;len=77; msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:34:51,537] _PostMsg msg:2;from=2;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    };len=77 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:34:51,537] [LUA] dispatch fid=2.0;sid=2.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:37:08,602] onMessage:2; ws=0x100b025c0;len=77; msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:37:08,603] _PostMsg msg:2;from=2;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    };len=77 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:37:08,603] [LUA] dispatch fid=2.0;sid=2.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "msg": 0
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:38:16,201] onDisconnection beg:1001; ws=0x100b025c0 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:38:16,202] onDisconnection:2; ws=0x100b025c0 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:38:16,202] _PostMsg msg:2;from=2;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:38:16,202] [LUA] dispatch fid=2.0;sid=2.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:38:19,069] onConnection:3; ws=0x100a084a0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:38:19,069] _PostMsg msg:3;from=3;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:38:19,069] [LUA] dispatch fid=3.0;sid=3.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:38:55,178] onDisconnection beg:1001; ws=0x100a084a0 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:38:55,178] onDisconnection:3; ws=0x100a084a0 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:38:55,179] _PostMsg msg:3;from=3;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:38:55,179] [LUA] dispatch fid=3.0;sid=3.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:38:56,542] onConnection:4; ws=0x100a08590 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:38:56,543] _PostMsg msg:4;from=4;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:38:56,543] [LUA] dispatch fid=4.0;sid=4.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:39:11,551] onMessage:4; ws=0x100a08590;len=72; msg={        "cmd": 1000,        "data": {            "msg": 0        }    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:39:11,551] _PostMsg msg:4;from=4;cmd=130;msg={        "cmd": 1000,        "data": {            "msg": 0        }    };len=72 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:39:11,551] [LUA] dispatch fid=4.0;sid=4.0;cmd=130.0;msg={        "cmd": 1000,        "data": {            "msg": 0        }    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:39:39,001] onDisconnection beg:1001; ws=0x100a08590 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:39:39,001] onDisconnection:4; ws=0x100a08590 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:39:39,001] _PostMsg msg:4;from=4;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:39:39,001] [LUA] dispatch fid=4.0;sid=4.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:40:19,195] onConnection:5; ws=0x100b03b90 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:40:19,195] _PostMsg msg:5;from=5;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:40:19,195] [LUA] dispatch fid=5.0;sid=5.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:40:27,477] onDisconnection beg:1001; ws=0x100b03b90 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:40:27,477] onDisconnection:5; ws=0x100b03b90 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:40:27,477] _PostMsg msg:5;from=5;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:40:27,478] [LUA] dispatch fid=5.0;sid=5.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:40:29,051] onConnection:6; ws=0x100a093b0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:40:29,051] _PostMsg msg:6;from=6;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:40:29,051] [LUA] dispatch fid=6.0;sid=6.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:40:29,879] onMessage:6; ws=0x100a093b0;len=72; msg={        "cmd": 1000,        "data": {            "msg": 0        }    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:40:29,880] _PostMsg msg:6;from=6;cmd=130;msg={        "cmd": 1000,        "data": {            "msg": 0        }    };len=72 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:40:29,880] [LUA] dispatch fid=6.0;sid=6.0;cmd=130.0;msg={        "cmd": 1000,        "data": {            "msg": 0        }    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:48:10,651] onDisconnection beg:1001; ws=0x100a093b0 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:48:10,652] onDisconnection:6; ws=0x100a093b0 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:48:10,652] _PostMsg msg:6;from=6;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:48:10,652] [LUA] dispatch fid=6.0;sid=6.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:48:13,902] onConnection:7; ws=0x100b043d0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:48:13,902] _PostMsg msg:7;from=7;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:48:13,902] [LUA] dispatch fid=7.0;sid=7.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:48:17,690] onMessage:7; ws=0x100b043d0;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:48:17,690] _PostMsg msg:7;from=7;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:48:17,691] [LUA] dispatch fid=7.0;sid=7.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:48:32,887] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:48:32,888] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:48:32,888] _CreateLvm: tid=0x700004fe9000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[ERROR|2018-06-25 20:48:32,917] pcall error =>[cpp/lvm.cpp:167{bool LVM::Init()}]
+[ERROR|2018-06-25 20:48:32,917] error loading module 'errorcode' from file 'script/common/errorcode.lua':
+	script/common/errorcode.lua:9: '}' expected (to close '{' at line 8) near '=' =>[cpp/lvm.cpp:169{bool LVM::Init()}]
+[ERROR|2018-06-25 20:48:32,917] create main lvm failure!  =>[cpp/lvm.cpp:278{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:48:38,391] onConnection:1; ws=0x100b043f0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:48:38,393] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:48:38,393] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:48:40,325] onMessage:1; ws=0x100b043f0;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:48:40,325] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:48:40,325] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:50:27,188] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:50:27,189] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:50:27,190] _CreateLvm: tid=0x700005571000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[ERROR|2018-06-25 20:50:27,210] pcall error =>[cpp/lvm.cpp:167{bool LVM::Init()}]
+[ERROR|2018-06-25 20:50:27,210] error loading module 'errorcode' from file 'script/common/errorcode.lua':
+	script/common/errorcode.lua:9: '}' expected (to close '{' at line 8) near '=' =>[cpp/lvm.cpp:169{bool LVM::Init()}]
+[ERROR|2018-06-25 20:50:27,210] create main lvm failure!  =>[cpp/lvm.cpp:278{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:50:43,264] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:50:43,265] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:50:43,265] _CreateLvm: tid=0x70000c542000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[ERROR|2018-06-25 20:50:47,486] pcall error =>[cpp/lvm.cpp:167{bool LVM::Init()}]
+[ERROR|2018-06-25 20:50:47,486] error loading module 'errorcode' from file 'script/common/errorcode.lua':
+	script/common/errorcode.lua:9: '}' expected (to close '{' at line 8) near '=' =>[cpp/lvm.cpp:169{bool LVM::Init()}]
+[ERROR|2018-06-25 20:50:47,486] create main lvm failure!  =>[cpp/lvm.cpp:278{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:51:06,143] onConnection:1; ws=0x100911a70 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:51:06,143] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:51:06,143] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:51:07,818] onMessage:1; ws=0x100911a70;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:51:07,819] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:51:07,819] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:51:41,187] onMessage:1; ws=0x100911a70;len=108; msg="    {\n        \"cmd\": 1001,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:51:41,187] _PostMsg msg:1;from=1;cmd=130;msg="    {\n        \"cmd\": 1001,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n";len=108 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:51:41,188] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg="    {\n        \"cmd\": 1001,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:52:04,020] onMessage:1; ws=0x100911a70;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:52:04,021] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:52:04,021] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:52:26,773] onMessage:1; ws=0x100911a70;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:52:26,773] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:52:26,773] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:52:49,254] onMessage:1; ws=0x100911a70;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:52:49,254] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:52:49,369] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:53:06,310] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:53:06,311] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:53:06,311] _CreateLvm: tid=0x700005990000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[ERROR|2018-06-25 20:53:09,626] pcall error =>[cpp/lvm.cpp:167{bool LVM::Init()}]
+[ERROR|2018-06-25 20:53:09,626] error loading module 'errorcode' from file 'script/common/errorcode.lua':
+	script/common/errorcode.lua:9: '}' expected (to close '{' at line 8) near '=' =>[cpp/lvm.cpp:169{bool LVM::Init()}]
+[ERROR|2018-06-25 20:53:09,626] create main lvm failure!  =>[cpp/lvm.cpp:278{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:53:16,802] onConnection:1; ws=0x100a0ab50 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:53:16,802] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:53:16,802] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:53:19,727] onMessage:1; ws=0x100a0ab50;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:53:19,727] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:53:19,727] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:54:15,150] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:54:15,151] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:54:15,151] _CreateLvm: tid=0x70000193f000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[ERROR|2018-06-25 20:54:17,350] pcall error =>[cpp/lvm.cpp:167{bool LVM::Init()}]
+[ERROR|2018-06-25 20:54:17,351] error loading module 'errorcode' from file 'script/common/errorcode.lua':
+	script/common/errorcode.lua:9: '}' expected (to close '{' at line 8) near '=' =>[cpp/lvm.cpp:169{bool LVM::Init()}]
+[ERROR|2018-06-25 20:54:17,351] create main lvm failure!  =>[cpp/lvm.cpp:278{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:54:24,717] onConnection:1; ws=0x100a01570 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:54:24,717] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:54:37,100] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:54:54,987] onMessage:1; ws=0x100a01570;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:54:54,987] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:55:01,098] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:46,628] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:56:46,629] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:56:46,629] _CreateLvm: tid=0x700006ee0000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:56:50,831] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,831] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,831] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,831] _CreateLvm: tid=0x700006ee0000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:56:50,835] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,836] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,836] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,836] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,836] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,836] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:50,837] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:56:55,035] onConnection:1; ws=0x100b0b5f0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:56:55,035] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:56:58,847] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:57:06,672] onMessage:1; ws=0x100b0b5f0;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:57:06,674] _PostMsg msg:1;from=1;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:57:21,422] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:57:25,878] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{"cmd":1000,"data":{"msg":0}} =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:57:31,809] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:57:42,194] [LUA] SendToClient beg:1.0, msg:{"error":0,"data":"success","cmd":1000};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:46,726] onDisconnection beg:1001; ws=0x100b0b5f0 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:58:46,726] onDisconnection:1; ws=0x100b0b5f0 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:58:46,726] _PostMsg msg:1;from=1;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:58:58,967] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 20:58:58,968] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 20:58:58,968] _CreateLvm: tid=0x70000e411000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:58:58,984] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,984] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,984] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,984] _CreateLvm: tid=0x70000e411000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 20:58:58,988] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,988] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,988] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,988] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,989] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,989] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:58:58,989] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:02,130] onConnection:1; ws=0x100b2ccc0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:59:02,130] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:59:02,130] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:23,628] onDisconnection beg:1001; ws=0x100b2ccc0 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:59:23,628] onDisconnection:1; ws=0x100b2ccc0 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 20:59:23,629] _PostMsg msg:1;from=1;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:59:23,629] [LUA] dispatch fid=1.0;sid=1.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:23,629] [LUA] ConnMgr:OnDisConnect:1.0 =>[connmgr.lua(line:49){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:27,794] onConnection:2; ws=0x100b2e0a0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 20:59:27,794] _PostMsg msg:2;from=2;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:59:27,795] [LUA] dispatch fid=2.0;sid=2.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:30,327] onMessage:2; ws=0x100b2e0a0;len=29; msg={"cmd":1000,"data":{"msg":0}} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 20:59:30,327] _PostMsg msg:2;from=2;cmd=130;msg={"cmd":1000,"data":{"msg":0}};len=29 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 20:59:30,327] [LUA] dispatch fid=2.0;sid=2.0;cmd=130.0;msg={"cmd":1000,"data":{"msg":0}} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:30,327] [LUA] LVM_CMD_CLIENT_MSG:2.0;msg:{"cmd":1000,"data":{"msg":0}} =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:30,327] [LUA] ConnMgr:OnHeart:2.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 20:59:30,328] [LUA] SendToClient beg:2.0, msg:{"error":0,"cmd":1000,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:00,896] onMessage:2; ws=0x100b2e0a0;len=76; msg={
+        "cmd": 999,
+        "data": {
+            "uid": 2
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:00:00,896] _PostMsg msg:2;from=2;cmd=130;msg={
+        "cmd": 999,
+        "data": {
+            "uid": 2
+        }
+    };len=76 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:00:00,896] [LUA] dispatch fid=2.0;sid=2.0;cmd=130.0;msg={
+        "cmd": 999,
+        "data": {
+            "uid": 2
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:00,896] [LUA] LVM_CMD_CLIENT_MSG:2.0;msg:{
+        "cmd": 999,
+        "data": {
+            "uid": 2
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:00,896] [LUA] LVM_CMD_CLIENT_OnCreateTable:2.0 =>[connmgr.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:00,897] [LUA] ConnMgr:GetLogin: fid=2.0;uid =>[connmgr.lua(line:91){GetLogin} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:00,897] [LUA] SendToClient beg:2.0, msg:{"error":1040,"cmd":999,"data":"user verify failure"};len:53 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:38,230] onDisconnection beg:1001; ws=0x100b2e0a0 =>[cpp/net.cpp:108{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 21:00:38,231] onDisconnection:2; ws=0x100b2e0a0 =>[cpp/net.cpp:124{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, int, char *, size_t) const}]
+[INFO|2018-06-25 21:00:38,231] _PostMsg msg:2;from=2;cmd=141;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:00:38,231] [LUA] dispatch fid=2.0;sid=2.0;cmd=141.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:38,231] [LUA] ConnMgr:OnDisConnect:2.0 =>[connmgr.lua(line:49){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:39,805] onConnection:3; ws=0x100b2f1f0 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 21:00:39,805] _PostMsg msg:3;from=3;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:00:39,806] [LUA] dispatch fid=3.0;sid=3.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:41,507] onMessage:3; ws=0x100b2f1f0;len=108; msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:00:41,507] _PostMsg msg:3;from=3;cmd=130;msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n";len=108 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:00:41,507] [LUA] dispatch fid=3.0;sid=3.0;cmd=130.0;msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:00:41,507] [LUA] LVM_CMD_CLIENT_MSG:3.0;msg:"    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[ERROR|2018-06-25 21:00:41,508] script/common/base.lua:134: attempt to concatenate a nil value (local 'wid') =>[cpp/lvm.cpp:206{bool LVM::Dispatch(int, int, int, char *, int)}]
+[INFO|2018-06-25 21:03:30,237] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 21:03:30,238] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 21:03:30,239] _CreateLvm: tid=0x700003954000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:03:32,216] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,216] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,216] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,216] _CreateLvm: tid=0x700003954000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:03:32,221] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,221] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,221] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,221] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,221] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,221] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:32,221] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:34,116] onConnection:1; ws=0x100a03e40 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 21:03:34,116] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:03:34,116] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:49,890] onMessage:1; ws=0x100a03e40;len=108; msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:03:49,890] _PostMsg msg:1;from=1;cmd=130;msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n";len=108 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:03:49,890] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:03:49,890] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:"    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:17,438] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 21:05:17,440] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 21:05:17,440] _CreateLvm: tid=0x700004d45000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:05:21,083] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,083] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,083] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,083] _CreateLvm: tid=0x700004d45000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:05:21,087] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,087] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,087] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,087] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,087] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,088] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:21,088] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:27,040] onConnection:1; ws=0x100830d20 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 21:05:27,040] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:05:27,041] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:28,486] onMessage:1; ws=0x100830d20;len=108; msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:05:28,486] _PostMsg msg:1;from=1;cmd=130;msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n";len=108 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:05:28,486] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg="    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:28,486] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:"    {\n        \"cmd\": 1000,\n        \"data\": {\n            \"username\": \"lisi\"\n        }\n    }\n" =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:48,393] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 21:05:48,394] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 21:05:48,394] _CreateLvm: tid=0x700001602000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:05:52,100] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,100] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,101] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,101] _CreateLvm: tid=0x700001602000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:05:52,104] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,105] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,105] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,105] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,105] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,105] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:52,105] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:55,219] onConnection:1; ws=0x100b27a40 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 21:05:55,219] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:05:55,219] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:56,632] onMessage:1; ws=0x100b27a40;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:05:56,632] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:05:56,633] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:05:56,633] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:06:01,208] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:06:01,209] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:06:18,896] onMessage:1; ws=0x100b27a40;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:06:18,896] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:06:18,896] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:06:18,897] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,814] xiaohei server start 丰... =>[cpp/main.cpp:34{int main(int, char **)}]
+[INFO|2018-06-25 21:07:05,816] App::Run() start. =>[cpp/app.cpp:23{bool App::Run()}]
+[INFO|2018-06-25 21:07:05,816] _CreateLvm: tid=0x700000d41000; file=main =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:07:05,840] [LUA] Main:ctor() =>[main.lua(line:24){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,841] [LUA] Main:init() =>[main.lua(line:28){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,841] [LUA] CreateLvm beg:script/m_login.lua =>[base.lua(line:120){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,841] _CreateLvm: tid=0x700000d41000; file=script/m_login.lua =>[cpp/lvm.cpp:273{int LvmMgr::_CreateLvm(const std::string &)}]
+[INFO|2018-06-25 21:07:05,844] [LUA] Login:ctor() =>[m_login.lua(line:14){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,844] [LUA] Login:init() =>[m_login.lua(line:18){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,844] [LUA] CreateLvm end:script/m_login.lua; id:1.0 =>[base.lua(line:122){CreateLvm} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,845] [LUA] RoomMgr:ctor() =>[roommgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,845] [LUA] RoomMgr:init() =>[roommgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,845] [LUA] ConnMgr:ctor() =>[connmgr.lua(line:10){ctor} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:05,845] [LUA] ConnMgr:init() =>[connmgr.lua(line:14){init} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:10,028] onConnection:1; ws=0x100b0a790 =>[cpp/net.cpp:89{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, uWS::HttpRequest) const}]
+[INFO|2018-06-25 21:07:10,029] _PostMsg msg:1;from=1;cmd=140;msg=;len=0 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:10,029] [LUA] dispatch fid=1.0;sid=1.0;cmd=140.0;msg= =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:11,340] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:11,340] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:11,340] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:11,341] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:11,341] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:11,341] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:13,746] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:13,746] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:13,746] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:13,746] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:13,746] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:13,747] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:14,666] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:14,666] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:14,666] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:14,666] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:14,667] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:14,667] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,434] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:15,434] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:15,434] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,434] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,435] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,435] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,777] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:15,778] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:15,778] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,778] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,778] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:15,779] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,065] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:16,066] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:16,066] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,066] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,066] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,066] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,298] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:16,298] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:16,298] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,298] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,299] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,299] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,514] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:16,514] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:16,514] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,514] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,514] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,514] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,722] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:16,722] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:16,722] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,723] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,723] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,723] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,914] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:16,914] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:16,914] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,914] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,915] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:16,915] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,114] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:17,114] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:17,114] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,114] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,115] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,115] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,322] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:17,322] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:17,322] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,322] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,322] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,323] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,522] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:17,522] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:17,522] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,523] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,523] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,523] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,706] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:17,706] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:17,706] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,706] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,707] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,707] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,898] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:17,898] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:17,898] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,898] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,898] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:17,899] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,090] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:18,090] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:18,090] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,091] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,091] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,091] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,266] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:18,266] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:18,266] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,267] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,267] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,267] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,441] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:18,441] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:18,442] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,442] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,442] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,442] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,634] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:18,634] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:18,634] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,635] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,635] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,635] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,818] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:18,818] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:18,818] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,819] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,819] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:18,819] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,001] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:19,001] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:19,002] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,002] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,002] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,003] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,186] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:19,186] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:19,186] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,186] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,187] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,187] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,378] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:19,378] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:19,378] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,379] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,379] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,379] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,561] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:19,561] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:19,562] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,562] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,562] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,562] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,769] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:19,769] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:19,770] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,770] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,770] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,770] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,962] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:19,962] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:19,963] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,963] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,963] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:19,964] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,170] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:20,170] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:20,170] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,170] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,171] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,171] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,386] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:20,386] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:20,387] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,387] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,387] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,387] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,609] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:20,610] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:20,610] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,610] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,610] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,610] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,834] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:20,834] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:20,834] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,835] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,835] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:20,835] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,050] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:21,050] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:21,050] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,051] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,051] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,051] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,282] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:21,282] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:21,283] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,283] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,283] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,283] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,490] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:21,490] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:21,491] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,491] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,492] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,492] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,706] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:21,706] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:21,707] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,708] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,709] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,710] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,930] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:21,930] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:21,931] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,931] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,931] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:21,931] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,122] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:22,123] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:22,123] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,123] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,123] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,123] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,346] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:22,347] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:22,347] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,347] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,347] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,347] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,554] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:22,554] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:22,554] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,555] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,555] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,556] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,793] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:22,793] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:22,794] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,794] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,794] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:22,794] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,010] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:23,010] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:23,011] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,011] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,011] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,012] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,226] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:23,226] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:23,226] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,226] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,226] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,227] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,434] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:23,434] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:23,435] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,435] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,435] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,435] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,650] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:23,650] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:23,651] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,651] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,651] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,651] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,850] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:23,850] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:23,850] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,850] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,850] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:23,850] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,066] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:24,066] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:24,066] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,067] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,067] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,067] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,274] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:24,274] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:24,275] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,275] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,275] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,275] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,482] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:24,482] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:24,482] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,482] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,483] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,483] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,690] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:24,691] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:24,691] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,691] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,691] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,691] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,890] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:24,891] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:24,891] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,891] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,891] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:24,891] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,082] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:25,083] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:25,083] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,083] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,083] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,084] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,293] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:25,293] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:25,293] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,293] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,293] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,293] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,482] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:25,482] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:25,483] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,483] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,483] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,483] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,691] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:25,691] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:25,692] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,692] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,692] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,692] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,882] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:25,882] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:25,883] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,883] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,883] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:25,883] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,090] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:26,091] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:26,091] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,091] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,091] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,091] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,298] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:26,299] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:26,299] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,299] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,299] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,300] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,506] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:26,507] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:26,507] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,507] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,507] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,508] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,738] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:26,739] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:26,739] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,739] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,739] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,740] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,946] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:26,946] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:26,946] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,946] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,947] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:26,947] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,154] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:27,154] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:27,155] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,155] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,155] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,155] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,362] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:27,363] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:27,363] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,363] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,363] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,363] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,571] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:27,571] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:27,571] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,571] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,572] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,574] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,794] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:27,794] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:27,795] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,795] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,796] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:27,796] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:28,003] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:28,003] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:28,003] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:28,003] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:28,004] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:28,004] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,509] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:31,509] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:31,509] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,509] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,510] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,510] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,730] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:31,730] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:31,730] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,731] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,731] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,731] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,939] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:31,939] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:31,939] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,939] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,939] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:31,939] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,139] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:32,140] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:32,140] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,140] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,141] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,141] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,347] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:32,347] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:32,347] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,347] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,349] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,350] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,547] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:07:32,547] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:07:32,547] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,548] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,549] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:07:32,549] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:12:53,041] onMessage:1; ws=0x100b0a790;len=6; msg={fdsa} =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:12:53,043] _PostMsg msg:1;from=1;cmd=130;msg={fdsa};len=6 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:12:53,043] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={fdsa} =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:12:53,043] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{fdsa} =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[ERROR|2018-06-25 21:12:53,044] script/utils/json.lua:225: Failed to scan constant from string {fdsa} at starting position 2 =>[cpp/lvm.cpp:206{bool LVM::Dispatch(int, int, int, char *, int)}]
+[INFO|2018-06-25 21:13:04,857] onMessage:1; ws=0x100b0a790;len=87; msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[cpp/net.cpp:102{auto NET::ws_work()::(anonymous class)::operator()(uWS::WebSocket<uWS::SERVER> *, char *, size_t, uWS::OpCode) const}]
+[INFO|2018-06-25 21:13:04,857] _PostMsg msg:1;from=1;cmd=130;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    };len=87 =>[cpp/lvm.cpp:371{void LvmMgr::_PostMsg(LVM_MSG *)}]
+[INFO|2018-06-25 21:13:04,858] [LUA] dispatch fid=1.0;sid=1.0;cmd=130.0;msg={
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[base.lua(line:96){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:13:04,858] [LUA] LVM_CMD_CLIENT_MSG:1.0;msg:{
+        "cmd": 1000,
+        "data": {
+            "username": "lisi"
+        }
+    } =>[connmgr.lua(line:171){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:13:04,858] [LUA] ConnMgr:OnHeart:1.0 =>[connmgr.lua(line:53){G_FUN} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
+[INFO|2018-06-25 21:13:04,858] [LUA] SendToClient beg:1.0, msg:{"cmd":1000,"error":0,"data":"success"};len:39 =>[base.lua(line:134){SendToClient} =>[cpp/lvm.cpp:37{int luaInterface(lua_State *)}]
