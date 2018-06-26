@@ -1,18 +1,20 @@
-package.path = "script/?.lua;script/utils/?.lua;script/common/?.lua;"..package.path
+package.path = "script/game/?.lua;script/?.lua;script/utils/?.lua;script/common/?.lua;"..package.path
 package.cpath = "luaclib/?.so;"..package.cpath
 --/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/lualibs/mobdebug
 --/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/bin/clibs53
--- package.path = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/lualibs/mobdebug/?.lua;"..package.path
--- package.path = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/lualibs/?.lua;"..package.path
--- package.cpath = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/bin/clibs53/?.dylib;"..package.cpath
--- package.cpath = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/bin/clibs53/?/?.dylib;"..package.cpath
--- require("mobdebug").start()
+package.path = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/lualibs/mobdebug/?.lua;"..package.path
+package.path = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/lualibs/?.lua;"..package.path
+package.cpath = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/bin/clibs53/?.dylib;"..package.cpath
+package.cpath = "/Applications/ZeroBraneStudio.app/Contents/ZeroBraneStudio/bin/clibs53/?/?.dylib;"..package.cpath
+require("mobdebug").start()
 
 require "functions"
 local CMD = require "cmd"
 local BASE = require "base"
 local log = require "log"
 local json = require "json"
+
+local mjlib = require "cs.mjlib"
 
 local Room = class("Room")
 function Room:ctor(obj,data)
@@ -48,6 +50,15 @@ function Room:OnEnterTable(msg)
             msg.zhuang = 1
         end
     end
+
+    self:StartGame()
+end
+
+function Room:StartGame()
+
+    self.cardsAll = mjlib.create()
+    local num_tbl = mjlib.getNumTable(self.cardsAll)
+    log.info(mjlib.getNumTableStr(num_tbl))
 end
 
 
